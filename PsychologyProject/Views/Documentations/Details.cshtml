@@ -1,0 +1,100 @@
+﻿@model PsychologyProject.Models.Documentation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Documentation : Details</h2>
+
+<div>
+    <hr />
+
+    <div class="well well-lg">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DocumentType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DocumentType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VersionId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VersionId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DocumentationFor)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DocumentationFor)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Complete)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Complete)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AnonymousAccess)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AnonymousAccess)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedBy)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DocumentText)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DocumentText)
+            </dd>
+
+        </dl>
+    </div>
+    </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

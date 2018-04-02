@@ -1,0 +1,75 @@
+﻿@model PsychologyProject.Models.UserTests
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>User Tests : Delete</h2>
+
+<h4>Are you sure you want to delete the @Model.Id this?</h4>
+<div>
+
+    <hr />
+
+    <div class="well well-lg">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TestId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TestId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ReasonForTestUsed)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReasonForTestUsed)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TestRawData)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TestRawData)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TestReturnedData)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TestReturnedData)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Result)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Result)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Interpretation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Interpretation)
+            </dd>
+
+        </dl>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>

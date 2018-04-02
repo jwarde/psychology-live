@@ -1,0 +1,91 @@
+﻿@model IEnumerable<PsychologyProject.Models.Documentation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Documentation</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Create New Document Type", "Create","DocumentationTypes")
+</p>
+
+<div class="well well-lg">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentType.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VersionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentationFor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnonymousAccess)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentText)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocumentType.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VersionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocumentationFor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Complete)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnonymousAccess)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocumentText)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

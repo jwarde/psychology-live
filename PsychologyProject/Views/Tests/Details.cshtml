@@ -1,0 +1,28 @@
+﻿@model PsychologyProject.Models.Tests
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Test : Details</h2>
+
+<div>
+
+    <hr />
+
+    <div class="well well-lg">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+        </dl>
+    </div></div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

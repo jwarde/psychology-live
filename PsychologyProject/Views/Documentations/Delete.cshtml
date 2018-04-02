@@ -1,0 +1,107 @@
+﻿@model PsychologyProject.Models.Documentation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Documentation : Delete</h2>
+
+<h4>Are you sure you want to delete the @Model.Title Project?</h4>
+<div>
+
+    <hr />
+
+    <div class="well well-lg">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DocumentType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DocumentType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VersionId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VersionId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DocumentationFor)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DocumentationFor)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Complete)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Complete)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AnonymousAccess)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AnonymousAccess)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedBy)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DocumentText)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DocumentText)
+            </dd>
+
+        </dl>
+    </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
